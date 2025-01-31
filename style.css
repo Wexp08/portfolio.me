@@ -1,32 +1,14 @@
-
+/* ОБЩИЕ СТИЛИ */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: radial-gradient(circle, #1a0033, #000);
     color: #fff;
     scroll-behavior: smooth;
-  }
-
-body {
-    font-size: 18px;
-    background-color: #f0f0f0;
 }
 
-@media (max-width: 1024px) {
-    body {
-        font-size: 16px;
-        background-color: #e0e0e0;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        background-color: #d0d0d0;
-    }
-}
-  
-  nav {
+/* НАВИГАЦИЯ */
+nav {
     position: fixed;
     top: 0;
     width: 100%;
@@ -34,35 +16,41 @@ body {
     padding: 10px 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  nav ul {
+}
+
+/* Меню */
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 20px;
-  }
-  
-  nav a {
+    padding: 0;
+    margin: 0;
+}
+
+/* Ссылки */
+nav a {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
     padding: 5px 10px;
     transition: background 0.3s ease;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     background: #7f5ac6;
     border-radius: 5px;
-  }
-  
-  .section {
+}
+
+/* ОСНОВНОЙ КОНТЕНТ */
+.section {
     padding: 100px 20px;
     text-align: center;
     position: relative;
-  }
-  
-  .section:before {
+}
+
+/* Анимация фона */
+.section:before {
     content: '';
     position: absolute;
     top: 0;
@@ -73,14 +61,16 @@ body {
     background: radial-gradient(circle at center, rgba(127, 90, 198, 0.3), transparent);
     z-index: -1;
     animation: glow-animation 3s infinite alternate;
-  }
-  
-  .glow {
+}
+
+/* СВЕТЯЩИЙСЯ ТЕКСТ */
+.glow {
     font-size: 2.5rem;
     text-shadow: 0 0 10px #7f5ac6, 0 0 20px #a385e0;
-  }
-  
-  .glow-button {
+}
+
+/* КНОПКА */
+.glow-button {
     display: inline-block;
     padding: 10px 20px;
     background: linear-gradient(90deg, #7f5ac6, #a385e0);
@@ -90,124 +80,170 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 15px #7f5ac6;
     transition: all 0.3s ease;
-  }
-  
-  .glow-button:hover {
+}
+
+.glow-button:hover {
     box-shadow: 0 0 25px #a385e0;
     transform: scale(1.05);
-  }
-  
-  .project-item {
+}
+
+/* КАРТОЧКИ ПРОЕКТОВ */
+.project-item {
     margin: 20px auto;
     padding: 20px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     box-shadow: 0 0 10px #7f5ac6;
     text-align: center;
-    max-width: 400px; /* Максимальная ширина карточки */
-  }
-  
-  .project-item img {
-    width: 100%; /* Изображение занимает всю ширину блока */
+    max-width: 400px;
+}
+
+.project-item img {
+    width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(127, 90, 198, 0.5);
     margin-bottom: 15px;
-  }
-  
-  .project-item h3 {
-    font-size: 1.5rem;
-    color: #a385e0;
-    margin-bottom: 10px;
-  }
-  
-  .project-item p {
-    font-size: 1rem;
-    color: #ccc;
-  }
+}
 
-  /* Стиль контейнера раздела "About Me" */
- .about-content {
+/* ОТДЕЛ "ОБО МНЕ" */
+.about-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     text-align: center;
-  }
-  
-  /* Круглое фото */
-  .profile-picture {
-    width: 300px; /* Размер круга */
-    height: 300px;
-    border-radius: 50%; /* Делает изображение круглым */
-    overflow: hidden; /* Обрезает изображение за пределами круга */
-    box-shadow: 0 0 15px rgba(127, 90, 198, 0.5); /* Светящийся эффект */
-    transition: transform 0.3s ease; /* Анимация увеличения */
-  }
-  
-  .profile-picture img {
+}
+
+/* ФОТО ПРОФИЛЯ */
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(127, 90, 198, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.profile-picture img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Обрезает изображение по кругу */
-  }
-  
-  /* Анимация при наведении */
-  .profile-picture:hover {
-    transform: scale(1.1); /* Увеличивает фото */
-    box-shadow: 0 0 25px rgba(127, 90, 198, 0.8); /* Усиливает светящийся эффект */
-  }
-  
-  /* Описание текста */
-  .about-content p {
+    object-fit: cover;
+}
+
+/* АНИМАЦИЯ ПРИ НАВЕДЕНИИ */
+.profile-picture:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(127, 90, 198, 0.8);
+}
+
+/* ОПИСАНИЕ ТЕКСТА */
+.about-content p {
     font-size: 1.2rem;
     color: #ccc;
     max-width: 500px;
-  }
-  
-  /* Контейнер для иконок */
+}
+
+/* ИКОНКИ СОЦСЕТЕЙ */
 .contact-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-bottom: 20px;
-  }
-  
-  /* Общие стили для иконок */
-  .icon {
+}
+
+.icon {
     width: 50px;
     height: 50px;
     background-size: cover;
     background-repeat: no-repeat;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  /* Иконка Telegram */
-  .icon.telegram {
-    background-image: url('telegram.png'); /* Путь к иконке Telegram */
-    background-color: #0088cc;
     border-radius: 50%;
-  }
-  
-  /* Иконка Instagram */
-  .icon.instagram {
-    background-image: url('instagram.png'); /* Путь к иконке Instagram */
-    background-color: #e4405f;
-    border-radius: 50%;
-  }
-  
-  /* Эффект при наведении на иконки */
-  .icon:hover {
+}
+
+/* ЭФФЕКТ НАВЕДЕНИЯ */
+.icon:hover {
     transform: scale(1.2);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-  }
+}
 
-  @keyframes glow-animation {
-    0% {
-      opacity: 0.6;
-      transform: translate(-50%, -50%) scale(1);
+/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 15px;
     }
-    100% {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1.2);
+    
+    .glow {
+        font-size: 2rem;
     }
-  }
+    
+    .project-item {
+        max-width: 90%;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .section {
+        padding: 60px 10px;
+    }
+
+    .glow {
+        font-size: 1.8rem;
+    }
+
+    .glow-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .profile-picture {
+        width: 180px;
+        height: 180px;
+    }
+
+    .contact-icons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glow {
+        font-size: 1.5rem;
+    }
+
+    .glow-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+}
